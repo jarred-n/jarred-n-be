@@ -55,5 +55,5 @@ articleSchema.index(
   }
 );
 
-const Article = module.exports = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 export default Article;

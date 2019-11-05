@@ -1,7 +1,8 @@
 const express = require('express')
-const router = express.router()
+const router = express.Router()
 
 import { Ariticle } from '../models'
+import config from '../config/config'
 
 //Get articles by pages
 router.get('/articles/page/:page', async (req, res, next) => {
@@ -14,10 +15,12 @@ router.get('/articles/page/:page', async (req, res, next) => {
     return res.header({   
         Status: true,
         Time: new Date().getTime(),
-        Version: _config2.default.version,
+        Version: config.version,
         Amount: count
       }).status(200).json(result);
   } catch (e) {
     return next(e)
   }
 })
+
+export default router;
