@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
-import { Ariticle } from '../models'
+import { Article } from '../models/index'
 import config from '../config/config'
 
 //Get articles by pages
